@@ -10,7 +10,7 @@ This resource requires you to have <a href="https://github.com/citizenfx/screens
 3. Add `start mugshot`to your server.cfg. Remember to start it after screenshot-basic and before your scripts that are using the exports.
 
 ### Usage
-This will upload a screenshot of your own ped and return the image url. This is a client event.
+This will upload a screenshot of your own ped and return the image url. This is a client event. Use the export or add the code in the client.lua to your own client file.
 ```
 local url = exports["mugshot"]:getMugshotUrl(GetPlayerPed(-1))
 ```
