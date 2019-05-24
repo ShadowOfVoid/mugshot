@@ -16,7 +16,7 @@ local url = exports["mugshot"]:getMugshotUrl(GetPlayerPed(-1))
 ```
 
 ### This is an ugly workaround!
-There's currently no way of choosing an area of the screen with the <a href="https://github.com/citizenfx/screenshot-basic">screenshot-basic</a> resource, it will always screenshot the whole screen without modifying it. That's why I'm making this ugly workaround. 
+There's currently no way of choosing an area of the screen with the <a href="https://github.com/citizenfx/screenshot-basic">screenshot-basic</a> resource without modifying it. It will always screenshot the whole screen. That's why I'm making this ugly workaround. 
 
 It displays the mugshot in the top left corner for a second. It then takes a screenshot and uploads it to gyazo. Since it's a screenshot of the whole screen we need to crop it. It uses a website called images.weserv.nl that does it for you. You'll then get a link to the mugshot without having to modify anything.
 
