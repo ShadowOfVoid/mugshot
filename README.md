@@ -4,6 +4,7 @@
 Grabs the mugshot of a ped and uploads it to gyazo. I made this mainly to be able to easily grab mugshots of a ped and use it in NUI.
 
 ### Installation
+This resource requires you to have <a href="https://github.com/citizenfx/screenshot-basic">screenshot-basic</a> installed.
 1. Register a gyazo application <a href="https://gyazo.com/oauth/applications">here</a>.
 2. Add the license key to the `uploadUrl` at the top in the client.lua.
 3. Add `start mugshot`to your server.cfg. Remember to start it after screenshot-basic and before your scripts that are using the exports.
