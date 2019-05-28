@@ -1,6 +1,3 @@
--- Register an application here: https://gyazo.com/oauth/applications
-local uploadUrl = "https://upload.gyazo.com/api/upload?access_token=YOURACCESSTOKEN"
-
 -- Uploads the mugshot
 function getMugshotUrl(ped)
 	-- Register the ped headshot
@@ -26,10 +23,8 @@ function getMugshotUrl(ped)
 			local url
 
 			-- Screenshot the screen using screenshot-basic
-			exports['screenshot-basic']:requestScreenshotUpload(uploadUrl, "imagedata", function(data)
-				-- Grabs the image url and crops it using images.weserv.nl since we don't want the whole screen. We only want the mugshot image
-				-- This is an ugly work-around but necessary since I don't want to force people to make changes to screenshot-basic resource
-				url = "https://images.weserv.nl/?url=".. json.decode(data)["url"] .."&crop=170,180,0,0"
+			exports['screenshot-basic']:requestScreenshotUpload("https://wew.wtf/upload.php", "files[]", {encoding = 'jpg', x = 0, y = 0, w = 160, h = 170}, function(data)
+				url = json.decode(data).files[1].url
 			end)
 
 			Wait(2500)
